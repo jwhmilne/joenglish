@@ -192,7 +192,68 @@ body { font-family: 'Inter', sans-serif; color: var(--navy); line-height: 1.6; t
 .contact-form input, .contact-form textarea { width: 100%; padding: 1.1rem; border: 1px solid #cbd5e1; border-radius: 12px; font-family: inherit; }
 .btn-main { background: var(--royal); color: white; padding: 1.1rem 2.2rem; border-radius: 12px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: 0.3s; }
 .btn-outline { border: 2px solid var(--navy); color: var(--navy); padding: 1rem 2.2rem; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; }
-.whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white !important; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+/* WhatsApp - Stay in the corner */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: white !important;
+    text-decoration: none !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 2000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: none !important;
+}
+
+/* LINE - Move to the left of WhatsApp */
+.line-float {
+    position: fixed;
+    bottom: 30px; /* Same as WhatsApp */
+    right: 105px; /* Shifted left (30px + 60px button + 15px gap) */
+    background: #06c755;
+    color: white !important;
+    text-decoration: none !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    z-index: 2000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: none !important;
+}
+
+/* Syncing animations for both buttons */
+.whatsapp-float, .line-float {
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+/* Hover state for both */
+.whatsapp-float:hover, .line-float:hover {
+    transform: scale(1.1) !important; /* This creates the growth effect */
+    text-decoration: none !important;
+}
+
+/* Ensure the FontAwesome icons don't jitter during the grow */
+.whatsapp-float i, .line-float i {
+    transition: transform 0.3s ease;
+}
+
+/* Ensure no underline on hover */
+.line-float:hover {
+    text-decoration: none !important;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
 
 @media (max-width: 992px) {
     .hero-grid, .method-grid, .contact-wrapper, .form-row { grid-template-columns: 1fr; }

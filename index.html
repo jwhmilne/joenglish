@@ -204,14 +204,14 @@
                     <h2>Ready to Start?</h2>
                     <p>Send a message to discuss your goals or book your first assessment session.</p>
                 </div>
-                <form id="contactForm" class="contact-form">
+                <form action="https://formspree.io/f/jwhmilne@gmail.com" method="POST" id="contactForm" class="contact-form">
                     <div class="form-row">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
-                    <textarea placeholder="How can I help you?" rows="5" required></textarea>
-                    <button type="submit" class="btn-main">Send Message</button>
-                </form>
+                <textarea name="message" placeholder="How can I help you?" rows="5" required></textarea>
+                <button type="submit" class="btn-main">Send Message</button>
+                </form> 
             </div>
         </div>
     </section>
@@ -219,6 +219,10 @@
     <a href="https://wa.me/+51940780086" class="whatsapp-float pulse" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <a href="https://line.me/ti/p/~+51940780086" class="line-float pulse" target="_blank">
+    <i class="fab fa-line"></i>
+</a>
 
     <div id="google_translate_element" style="display:none;"></div>
 
