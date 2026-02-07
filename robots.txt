@@ -1,0 +1,14 @@
+# robots.txt for Joe English
+# https://joeenglish.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://joeenglish.com/sitemap.xml
+
+# LLM-friendly content
+# See /llms.txt for AI-readable information about this site
+
+# Crawl-delay (optional - be gentle with the server)
+Crawl-delay: 10
