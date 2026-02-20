@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  =============================================================
+  sitemap.xml for Joe English
+  =============================================================
+  
+  TODO: Replace YOUR_DOMAIN.com with your actual domain
+        Example: joeenglish.com, joeenglishcoach.com, etc.
+  
+  =============================================================
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joeenglish.com/</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://YOUR_DOMAIN.com/</loc>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://joeenglish.com/#method</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://YOUR_DOMAIN.com/#method</loc>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joeenglish.com/#contact</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://YOUR_DOMAIN.com/#contact</loc>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://YOUR_DOMAIN.com/thank-you.html</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!-- LLM-friendly content -->
   <url>
-    <loc>https://joeenglish.com/llms.txt</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://YOUR_DOMAIN.com/llms.txt</loc>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

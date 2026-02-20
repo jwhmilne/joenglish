@@ -1,11 +1,18 @@
+# =============================================================
 # robots.txt for Joe English
-# https://joeenglish.com
+# =============================================================
+# 
+# TODO: Replace YOUR_DOMAIN.com with your actual domain
+#       Example: joeenglish.com, joeenglishcoach.com, etc.
+#
+# =============================================================
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://joeenglish.com/sitemap.xml
+# TODO: Update with your domain
+Sitemap: https://YOUR_DOMAIN.com/sitemap.xml
 
 # LLM-friendly content
 # See /llms.txt for AI-readable information about this site

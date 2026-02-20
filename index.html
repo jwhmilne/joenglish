@@ -3,26 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe English | Professional Coaching</title>
+    <title>Joe English | Professional English Coaching - 12+ Years Experience</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional English coaching with 12+ years experience. Bridge the gap between textbook English and natural, confident communication. Online lessons for professionals and students worldwide.">
+    <meta name="keywords" content="English teacher, ESL, online English lessons, professional English coaching, business English, English tutor, learn English online">
+    <meta name="author" content="Joe English">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Joe English | Professional English Coaching">
+    <meta property="og:description" content="Practical English. Real Confidence. 12+ years helping professionals and students communicate naturally.">
+    <meta property="og:image" content="assets/images/joe-profile2.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joe English | Professional English Coaching">
+    <meta name="twitter:description" content="Practical English. Real Confidence. 12+ years helping professionals and students communicate naturally.">
+    <meta name="twitter:image" content="assets/images/joe-profile2.jpg">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts & Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Joe English",
+        "description": "Professional English coaching with 12+ years experience. Personalized online lessons for professionals and students worldwide.",
+        "url": "https://joeenglish.com",
+        "sameAs": [
+            "https://wa.me/+51940780086",
+            "https://line.me/ti/p/~jwhmilne"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+51-940-780-086",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Spanish", "Chinese", "Japanese", "Korean"]
+        },
+        "areaServed": "Worldwide",
+        "serviceType": "Online English Coaching"
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-flex">
-        <a href="#" class="logo">JOE<span>ENGLISH</span></a>
-        <div class="nav-menu">
+        <a href="#" class="logo" aria-label="Joe English - Home">JOE<span>ENGLISH</span></a>
+        
+        <!-- Hamburger Menu Button (Mobile) -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <div class="nav-menu" id="navMenu">
             <ul class="nav-links">
-                <li><a href="#method" class="hide-mobile">Method</a></li>
-                <li class="lang-switcher">
-                    <a href="javascript:void(0)" onclick="doGTranslate('en')">EN</a>
-                    <a href="javascript:void(0)" onclick="doGTranslate('zh-TW')">繁</a>
-                    <a href="javascript:void(0)" onclick="doGTranslate('ja')">JP</a>
-                    <a href="javascript:void(0)" onclick="doGTranslate('ko')">KO</a>
-                    <a href="javascript:void(0)" onclick="doGTranslate('es')">ES</a>
+                <li><a href="#method">Method</a></li>
+                <li class="lang-switcher" aria-label="Language selector">
+                    <a href="javascript:void(0)" onclick="doGTranslate('en')" aria-label="English">EN</a>
+                    <a href="javascript:void(0)" onclick="doGTranslate('zh-TW')" aria-label="Traditional Chinese">繁</a>
+                    <a href="javascript:void(0)" onclick="doGTranslate('ja')" aria-label="Japanese">JP</a>
+                    <a href="javascript:void(0)" onclick="doGTranslate('ko')" aria-label="Korean">KO</a>
+                    <a href="javascript:void(0)" onclick="doGTranslate('es')" aria-label="Spanish">ES</a>
                 </li>
                 <li><a href="#contact" class="nav-cta">Book</a></li>
             </ul>
@@ -30,7 +87,7 @@
     </div>
 </nav>
 
-    <header class="hero">
+    <header class="hero" id="main-content">
         <div class="container hero-grid">
             <div class="hero-content animate__animated animate__fadeInLeft">
                 <span class="badge">12+ Years Experience</span>
@@ -44,7 +101,7 @@
             <div class="hero-image animate__animated animate__fadeInRight">
                 <div class="image-frame">
                     <div class="hero-img-wrapper">
-                        <img src="joe-profile2.jpg" alt="Joe - English Teacher">
+                        <img src="assets/images/joe-profile2.jpg" alt="Joe - Professional English Teacher with 12+ years experience" loading="lazy" decoding="async">
                     </div>
                     <div class="floating-badge">ESL Expert</div>
                 </div>
@@ -57,20 +114,20 @@
             <h2 class="section-title">Your Path to Fluency</h2>
             <div class="method-grid">
                 <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-bullseye"></i></div>
-                    <div class="step-num">01</div>
+                    <div class="method-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></div>
+                    <div class="step-num" aria-hidden="true">01</div>
                     <h3>Target Discovery</h3>
                     <p>We identify vocabulary and grammar for real situations you actually face in your career.</p>
                 </div>
                 <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-comments"></i></div>
-                    <div class="step-num">02</div>
+                    <div class="method-icon" aria-hidden="true"><i class="fas fa-comments"></i></div>
+                    <div class="step-num" aria-hidden="true">02</div>
                     <h3>Guided Practice</h3>
                     <p>Structured speaking tasks and roleplays to build muscle memory and natural flow.</p>
                 </div>
                 <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-pen-fancy"></i></div>
-                    <div class="step-num">03</div>
+                    <div class="method-icon" aria-hidden="true"><i class="fas fa-pen-fancy"></i></div>
+                    <div class="step-num" aria-hidden="true">03</div>
                     <h3>Feedback & Notes</h3>
                     <p>Personalised digital notes and practical homework for visible, week-by-week progress.</p>
                 </div>
@@ -78,20 +135,20 @@
         </div>
     </section>
 
-    <section class="testimonials-orbit">
+    <section class="testimonials-orbit" id="testimonials">
         <div class="container">
             <h2 class="section-title" style="color: white; margin-bottom: 60px;">Student Success Stories</h2>
             
-            <div class="orbit-container" id="orbitContainer">
-                <button id="orbitPrev" class="orbit-btn side-btn prev"><i class="fas fa-chevron-left"></i></button>
-                <button id="orbitNext" class="orbit-btn side-btn next"><i class="fas fa-chevron-right"></i></button>
+            <div class="orbit-container" id="orbitContainer" role="region" aria-label="Student testimonials carousel">
+                <button id="orbitPrev" class="orbit-btn side-btn prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                <button id="orbitNext" class="orbit-btn side-btn next" aria-label="Next testimonial"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
 
                 <div class="orbit-track" id="orbitTrack">
 
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="gibson-testimonial.jpg" alt="Gibson" class="t-avatar">
+                                <img src="assets/images/gibson-testimonial.jpg" alt="Gibson" class="t-avatar">
                                 <div class="t-meta"><span>Gibson</span><small>High School Student</small></div>
                             </div>
                             <p class="t-text">"We are so grateful for Joe. High school oral presentations were a huge challenge for Gibson, but Joe’s teaching style was the perfect fit. Despite initial nerves, Gibson quickly felt at ease thanks to Joe’s patience and ability to adapt conversation levels to his proficiency. Joe encourages Gibson to use his existing vocabulary and provides immediate feedback, including a rewriting process that truly reinforces learning. After 10+ lessons, Gibson is much more confident, even taking the initiative to share personal stories in English. I highly recommend Joe."</p>
@@ -101,7 +158,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="rong-testimonial.jpg" alt="Rong" class="t-avatar">
+                                <img src="assets/images/rong-testimonial.jpg" alt="Rong" class="t-avatar">
                                 <div class="t-meta"><span>Rong</span><small>Project Manager at ASUSTeK Computer Inc.</small></div>
                             </div>
                             <p class="t-text">"Joe’s teaching is very lively. He adjusts his words based on the student’s level. When I don’t understand something, he explains it to me again and again with patience. When I don’t know how to express myself, I use gestures, and he can still understand me. Thank you, Joe, for your patient teaching."</p>
@@ -111,7 +168,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="cherie-testimonial.jpg" alt="Cherie" class="t-avatar">
+                                <img src="assets/images/cherie-testimonial.jpg" alt="Cherie" class="t-avatar">
                                 <div class="t-meta"><span>Cherie</span><small>Financial Controller at TW TMS Maersk Contract Logistics & Mum</small></div>
                             </div>
                             <p class="t-text">"I work in finance for a foreign company and use English regularly at work. Joe is a very dedicated and thoughtful teacher who always corrects my mistakes and helps me improve. My listening and speaking used to be my weak points, but now I can even understand English without subtitles. As a mother of a three-year-old, being able to take classes after 11 p.m. Taiwan time is very important to me, and Joe's flexible schedule makes this possible. Before an overseas business trip, he even gave me intensive practice on commonly used meeting expressions, which was incredibly helpful. If you're looking for a professional teacher whose methods actually bridge the gap between textbook learning and the real world, Joe is the one."</p>
@@ -121,7 +178,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="arella-testimonial.jpg" alt="Arella" class="t-avatar">
+                                <img src="assets/images/arella-testimonial.jpg" alt="Arella" class="t-avatar">
                                 <div class="t-meta"><span>Arella</span><small>Finance Manager at Fineforming Precision Metals Co., Ltd. & Mum</small></div>
                             </div>
                             <p class="t-text">"Joe is a fantastic teacher. When I first joined his class, he made me feel like an old friend immediately. I am deeply impressed by his enthusiasm and humor; he is always patient and encourages his students in all areas of life. He is incredibly generous with his time outside of class to help us practice our English. I especially enjoy his teaching style and his British accent. He is one of the most admirable people I have ever met."</p>
@@ -131,7 +188,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="alfredo-testimonial.jpg" alt="Alfredo" class="t-avatar">
+                                <img src="assets/images/alfredo-testimonial.jpg" alt="Alfredo" class="t-avatar">
                                 <div class="t-meta"><span>Alfredo</span><small>Software Engineer & Dad</small></div>
                             </div>
                             <p class="t-text">"I’m really proud to have an amazing teacher like Joe. Since I started my journey to learn and improve my English where I had different English teachers I haven’t found a good one yet until I met Joe. I had the opportunity to have some classes with him where I felt confident because his methodology help me to feel confidence and comfortable and our classes it was like a good friend’s conversation because he’s a great sense of humor and helps in every aspect or detail that you want to say or transmit in your sentences. Since the first class he focuses to help you to achieve your goals."</p>
@@ -141,7 +198,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="michelle-testimonial.jpg" alt="Michelle" class="t-avatar">
+                                <img src="assets/images/michelle-testimonial.jpg" alt="Michelle" class="t-avatar">
                                 <div class="t-meta"><span>Michelle</span><small>Retired Businesswoman & Mum</small></div>
                             </div>
                             <p class="t-text">"I'm very happy to learn English from Joe. I like his English pronunciation and his teaching style very much. He gave me a lot of help when it came to improving my English. He always makes learning intriguing for students. His classes are never dull or boring. Joe's patience and enthusiasm attracted me to continue to learn from him."</p>
@@ -151,7 +208,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="emily-testimonial.jpg" alt="Emily" class="t-avatar">
+                                <img src="assets/images/emily-testimonial.jpg" alt="Emily" class="t-avatar">
                                 <div class="t-meta"><span>Emily</span><small>General Manager at Beijing Zeyuan Investment Co., Ltd. & Mum</small></div>
                             </div>
                             <p class="t-text">"Joe is a very experienced English teacher who selects appropriate courses based on students' English levels. In China, I learned English in a way that left me speechless, without an English-speaking environment. I couldn't even have a simple conversation and was too timid to speak English. I believe many of you are like me. Joe encourages me and patiently teaches me pronunciation. Even though I'm in China, taking Joe's online English classes provides an English-speaking environment, and I've started to love English."</p>
@@ -161,7 +218,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="angel-testimonial.jpg" alt="Angel" class="t-avatar">
+                                <img src="assets/images/angel-testimonial.jpg" alt="Angel" class="t-avatar">
                                 <div class="t-meta"><span>Angel</span><small>Owner at Chic Beaute Nails Paris</small></div>
                             </div>
                             <p class="t-text">“I am very happy to be Joe's student. The teacher is sometimes very humorous in class, and sometimes very strict. He will patiently guide students to learn and think about problems. The teacher's lectures are organized and focused. The explanation of the key knowledge is very clear and easy to understand, which makes it easy for students to understand the knowledge. The passion of the teacher during the lecture will infect us, and the classroom atmosphere is very good. It made my English improve very quickly.”</p>
@@ -171,7 +228,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="flavia-testimonial.jpg" alt="Flavia" class="t-avatar">
+                                <img src="assets/images/flavia-testimonial.jpg" alt="Flavia" class="t-avatar">
                                 <div class="t-meta"><span>Flavia</span><small>Teacher</small></div>
                             </div>
                             <p class="t-text">“He's patient, encouraging and he made me feel like I could easily achieve my goals. He believes in his students’ abilities, that is a major confidence booster for anyone! He helps with any fears you may have, and provides a safe environment to practice the language. He's clear in his explanations and gives you many examples so you can understand better. Plus, his lessons are always fun and absorbing, so you can learn in a playful way as well. He’s an excellent teacher, and most importantly, a great person to learn from.”</p>
@@ -181,7 +238,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="madya-testimonial.jpg" alt="Madya" class="t-avatar">
+                                <img src="assets/images/madya-testimonial.jpg" alt="Madya" class="t-avatar">
                                 <div class="t-meta"><span>Madya</span><small>University Student</small></div>
                             </div>
                             <p class="t-text">“He's patient, encouraging and he made me feel like I could easily achieve my goals. He believes in his students’ abilities, that is a major confidence booster for anyone! He helps with any fears you may have, and provides a safe environment to practice the language. He's clear in his explanations and gives you many examples so you can understand better. Plus, his lessons are always fun and absorbing, so you can learn in a playful way as well. He’s an excellent teacher, and most importantly, a great person to learn from.”</p>
@@ -191,7 +248,7 @@
                     <div class="t-item">
                         <div class="t-card">
                             <div class="t-header">
-                                <img src="owen-testimonial.jpg" alt="Owen" class="t-avatar">
+                                <img src="assets/images/owen-testimonial.jpg" alt="Owen" class="t-avatar">
                                 <div class="t-meta"><span>Owen</span><small>Primary School Student</small></div>
                             </div>
                             <p class="t-text">“Owen has been taking classes with Joe for over two years, and I'm very satisfied with Joe's teaching. Joe is a humorous and passionate teacher. His lessons are tailored to each child's interests, ensuring Owen never loses his enthusiasm for the classes. The lessons are very lively, with competitive projects that spark a sense of accomplishment and a desire to answer questions. Homework assignments are incredibly diverse, including speaking (recording), answering questions, writing, drawing, and even AI-generated artwork... Joe is always coming up with new ideas, so you'll never be bored!”</p>
@@ -214,26 +271,115 @@
                 <div class="contact-info">
                     <h2>Ready to Start?</h2>
                     <p>Send a message to discuss your goals or book your first assessment session.</p>
-                </div>
-                <form action="https://formspree.io/f/jwhmilne@gmail.com" method="POST" id="contactForm" class="contact-form">
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                    
+                    <!-- Direct Contact Channels -->
+                    <div class="contact-channels">
+                        <h4>Or reach me directly:</h4>
+                        <a href="https://wa.me/+51940780086" class="contact-channel whatsapp" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://line.me/ti/p/~jwhmilne" class="contact-channel line" target="_blank" rel="noopener">
+                            <i class="fab fa-line" aria-hidden="true"></i>
+                            <span>LINE</span>
+                        </a>
+                        <a href="mailto:jwhmilne@gmail.com" class="contact-channel email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>jwhmilne@gmail.com</span>
+                        </a>
                     </div>
-                <textarea name="message" placeholder="How can I help you?" rows="5" required></textarea>
-                <button type="submit" class="btn-main">Send Message</button>
+                    
+                    <!-- Availability Info -->
+                    <div class="availability-info">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span>Flexible scheduling across time zones (Americas, Asia, Europe)</span>
+                    </div>
+                </div>
+                
+                <!-- Web3Forms - Replace YOUR_ACCESS_KEY with your actual key from web3forms.com -->
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New inquiry from Joe English website">
+                    <input type="hidden" name="redirect" value="thank-you.html">
+                    <input type="hidden" name="from_name" value="Joe English Website">
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Your Message</label>
+                        <textarea id="message" name="message" placeholder="How can I help you?" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-main">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Sending...
+                        </span>
+                    </button>
                 </form> 
             </div>
         </div>
     </section>
 
-    <a href="https://wa.me/+51940780086" class="whatsapp-float pulse" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">JOE<span>ENGLISH</span></a>
+                    <p>Professional English coaching for your success. 12+ years helping professionals and students worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#method">Method</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://wa.me/+51940780086" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://line.me/ti/p/~jwhmilne" target="_blank" rel="noopener" aria-label="Contact via LINE">
+                            <i class="fab fa-line" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:jwhmilne@gmail.com" aria-label="Send email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Joe English. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <a href="https://wa.me/+51940780086" class="float-btn whatsapp-float pulse" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <a href="https://line.me/ti/p/~jwhmilne" class="line-float pulse" target="_blank">
-    <i class="fab fa-line"></i>
-</a>
+    <a href="https://line.me/ti/p/~jwhmilne" class="float-btn line-float pulse" target="_blank" rel="noopener" aria-label="Contact via LINE">
+        <i class="fab fa-line" aria-hidden="true"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
 
     <div id="google_translate_element" style="display:none;"></div>
 

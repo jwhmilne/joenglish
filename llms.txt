@@ -64,5 +64,10 @@ Students consistently report improved confidence, better listening comprehension
 
 ## Optional
 
-- [Contact Form](https://joeenglish.com/#contact): Book a session or ask questions
-- [Teaching Method](https://joeenglish.com/#method): Detailed explanation of the 3-step teaching approach
+- [Contact Form](https://YOUR_DOMAIN.com/#contact): Book a session or ask questions
+- [Teaching Method](https://YOUR_DOMAIN.com/#method): Detailed explanation of the 3-step teaching approach
+
+# =============================================================
+# TODO: Replace YOUR_DOMAIN.com with your actual domain
+#       Example: joeenglish.com, joeenglishcoach.com, etc.
+# =============================================================

@@ -6,10 +6,75 @@ const nextBtn = document.getElementById('orbitNext');
 const dotsContainer = document.getElementById('orbitDots');
 const counterElement = document.getElementById('orbitCounter');
 
+// New UI elements
+const hamburger = document.getElementById('hamburgerBtn');
+const navMenu = document.getElementById('navMenu');
+const scrollTopBtn = document.getElementById('scrollTop');
+
 let currentIndex = 0;
 let startX = 0;
 let isDragging = false;
 const CHAR_LIMIT = 250; // Text length before "Read More" appears
+
+// --- HAMBURGER MENU TOGGLE ---
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('active');
+        
+        // Animate hamburger icon
+        hamburger.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            hamburger.focus();
+        }
+    });
+}
+
+// --- SCROLL TO TOP BUTTON ---
+if (scrollTopBtn) {
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top on click
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // --- 1. INITIALIZE DOTS & READ MORE ---
 items.forEach((item, i) => {
@@ -93,6 +158,29 @@ const handlePrev = () => {
 nextBtn.addEventListener('click', handleNext);
 prevBtn.addEventListener('click', handlePrev);
 
+// --- KEYBOARD NAVIGATION FOR CAROUSEL ---
+document.addEventListener('keydown', (e) => {
+    // Only handle arrow keys when carousel is in view or focused
+    const testimonialsSection = document.getElementById('testimonials');
+    if (!testimonialsSection) return;
+    
+    const rect = testimonialsSection.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+    
+    // Check if carousel or its children have focus, or if carousel is in view
+    const carouselHasFocus = orbitContainer && orbitContainer.contains(document.activeElement);
+    
+    if (isInView || carouselHasFocus) {
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            handlePrev();
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            handleNext();
+        }
+    }
+});
+
 // --- 4. DRAG & SWIPE LOGIC ---
 orbitContainer.addEventListener('mousedown', (e) => {
     if (e.target.classList.contains('read-more-btn')) return;
@@ -134,44 +222,39 @@ const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault(); // Stop the page from refreshing
+        e.preventDefault();
         
         const btn = this.querySelector('button');
         const originalBtnText = btn.innerHTML;
         btn.innerHTML = 'Sending...';
         btn.disabled = true;
 
-        // Get the data from the form
         const formData = new FormData(this);
-        const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch(this.action, {
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
+                body: formData
             });
 
-            if (response.ok) {
-                btn.innerHTML = 'Message Sent!';
-                btn.style.background = '#10b981'; // Green for success
-                this.reset(); // Clear the form
+            const result = await response.json();
+
+            if (result.success) {
+                // Redirect to thank you page
+                window.location.href = 'thank-you.html';
             } else {
-                throw new Error('Form submission failed');
+                throw new Error(result.message || 'Form submission failed');
             }
         } catch (error) {
+            console.error('Form error:', error);
             btn.innerHTML = 'Error! Try Again';
-            btn.style.background = '#ef4444'; // Red for error
+            btn.style.background = '#ef4444';
             btn.disabled = false;
-        } finally {
-            // Optional: reset button after 3 seconds
+            
+            // Reset button after 3 seconds
             setTimeout(() => {
                 btn.innerHTML = originalBtnText;
-                btn.disabled = false;
-                btn.style.background = ''; 
+                btn.style.background = '';
             }, 3000);
         }
     });
